@@ -4,14 +4,13 @@ class ManagePostsController extends Controller{
 	
 	public $postObject;
 
-	protected $access = 1;
-
-
-	public function index(){
+    protected $access = "1";
+	
+	public function index() {
 
     }
 
-	public function add(){
+    public function add(){
 		$this->postObject = new Post();
 		$this->getCategories();
 		$this->set('task', 'save');
